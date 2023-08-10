@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ugly Bizarre Page</title>
+    <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <h1 class="title">Welcome to the Ugly Bizarre Page!</h1>
+            <p class="paragraph">Embrace the chaos</p>
+            <button class="button" id="dareButton">Dare to Click Me... But to many times and you'll break this awesome page!</button>
+
+            <div class="shapes">
+                <div class="shape circle"></div>
+                <div class="shape triangle"></div>
+                <div class="shape line"></div>
+                <div class="shape square"></div>
+            </div>
+
+            <div class="cat-dog-container" id="catDogContainer">
+                <img class="cat" src="giphy.gif" alt="Cat">
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script>
+    const dareButton = document.getElementById('dareButton');
+    const catDogContainer = document.getElementById('catDogContainer');
+
+    dareButton.addEventListener('click', () => {
+        for (let i = 0; i < 5; i++) {
+            const replicatedCat = document.createElement('img');
+            replicatedCat.classList.add('replicated-cats');
+            replicatedCat.src = 'giphy.gif';
+            replicatedCat.style.left = `${getRandomPosition()}px`;
+            replicatedCat.style.top = `${getRandomPosition()}px`;
+            catDogContainer.appendChild(replicatedCat);
+        }
+    });
+
+    function getRandomPosition() {
+        const maxPosition = 500;
+        return Math.floor(Math.random() * maxPosition);
+    }
+</script>
+
+</html>

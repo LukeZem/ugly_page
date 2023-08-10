@@ -1,0 +1,150 @@
+body {
+    background-image: url('1MhNm6.jpg');
+    background-size: auto;
+    background-repeat: repeat;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('1MhNm6.jpg');
+    background-size: auto;
+    background-repeat: no-repeat;
+  }
+  
+  .content {
+    background-color: rgba(0, 255, 0, 0.3);
+    border: 10px solid yellow;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 5px #888888;
+  }
+  
+  .title {
+    font-size: 48px;
+    color: blue;
+    text-shadow: 5px 5px purple;
+    transform: rotate(-10deg);
+  }
+  
+  .paragraph {
+    font-size: 24px;
+    color: red;
+    margin-top: 20px;
+    line-height: 1.5;
+    text-align: center;
+    transform: skewX(-20deg);
+  }
+  
+  .button {
+    background-color: pink;
+    border: none;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+  }
+  
+  .button:hover {
+    background-color: orange;
+    transform: scale(1) rotate(15deg);
+  }
+  
+  .shapes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    animation: spin 5s linear infinite
+  }
+  
+  .shapes .shape {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    background-color: rgba(255, 0, 0, 0.5);
+    animation: spin 5s linear infinite
+  }
+  
+  .shapes .circle {
+    border-radius: 50%;
+    animation: spin 5s linear infinite
+  }
+  
+  .shapes .triangle {
+    width: 0;
+    height: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 100px solid rgba(0, 0, 255, 0.5);
+    animation: spin 5s linear infinite
+
+  }
+  
+  .shapes .line {
+    width: 150px;
+    height: 10px;
+    background-color: rgba(0, 255, 0, 0.5);
+    transform: rotate(45deg);
+  }
+  
+  .cat-dog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+  }
+  
+  .cat {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    animation: spin 5s linear infinite;
+  }
+  
+  .dog {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .cat-dog-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    position: relative;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* New style for the replicated spinning cats */
+  .replicated-cats {
+    position: absolute;
+    animation: replicateSpin 10s linear infinite;
+  }
+
+  @keyframes replicateSpin {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(90deg); }
+    50% { transform: rotate(180deg); }
+    75% { transform: rotate(270deg); }
+  }
